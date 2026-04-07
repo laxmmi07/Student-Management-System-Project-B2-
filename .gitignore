@@ -1,0 +1,5 @@
+node_modules/
+server/node_modules/
+.env
+*.pub
+id_ed25519_*
