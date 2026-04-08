@@ -2,15 +2,26 @@
 
 ## Prerequisites
 - Node.js installed
+- MongoDB running locally
 - API server must be running on http://localhost:5000
+
+## How to Start the API First
+```bash
+cd api
+npm install
+npm run seed
+npm run dev
+```
+API runs at `http://localhost:5000`
+API Docs at `http://localhost:5000/docs`
 
 ## How to Start the Client
 
 ### Option 1 — VS Code Live Server (Recommended)
-1. Open the project in VS Code
-2. Right-click `client/index.html`
+1. Open the `client` folder in VS Code
+2. Right-click `index.html`
 3. Click **"Open with Live Server"**
-4. Client opens at `http://127.0.0.1:5500/client/index.html`
+4. Client opens at `http://127.0.0.1:5500`
 
 ### Option 2 — Using serve
 ```bash
@@ -20,20 +31,18 @@ serve .
 ```
 Then open `http://localhost:3000`
 
-## How to Start the API
-```bash
-# From project root
-npm run dev
-```
-API runs at `http://localhost:5000`
-
 ## How to Run Tests
+Tests are located in `api/tests/student.test.js`
+
+Make sure both the API and client are running, then:
 ```bash
-# From project root
-npm test
+cd api
+npx testcafe chromium tests/student.test.js
 ```
-Requires Brave browser installed at:
-`C:/Users/don48/AppData/Local/BraveSoftware/Brave-Browser/Application/brave.exe`
+Or with Chrome:
+```bash
+npx testcafe chrome tests/student.test.js
+```
 
 ## API Endpoints
 | Method | Endpoint | Description |
@@ -48,7 +57,15 @@ Requires Brave browser installed at:
 - View all students in a table
 - Add new students via form
 - Edit existing student records
-- Delete students
+- Delete students with confirmation
 - Live search by name, course or email
 - Stats dashboard showing totals and averages
 - API documentation at `http://localhost:5000/docs`
+
+## Project Structure
+```
+cet252/
+├── api/          — Node.js/Express REST API
+├── client/       — HTML/CSS/JS frontend
+└── apidoc/       — Generated API documentation site
+```
