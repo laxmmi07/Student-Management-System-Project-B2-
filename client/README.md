@@ -69,3 +69,7 @@ cet252/
 ├── client/       — HTML/CSS/JS frontend
 └── apidoc/       — Generated API documentation site
 ```
+
+## Figma Designs
+ - Lo-Fi WireFrames and Hi-Fi Prototype:
+ - [Figma Link] link:- https://www.figma.com/design/dCcMTlWHjcbrRtVqmpkjfz/Untitled?node-id=0-1&t=twwpBMPS18DLhgBL-1
