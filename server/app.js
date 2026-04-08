@@ -4,6 +4,11 @@ const cors = require("cors");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const studentRoutes = require("./routes/students");
+const courseRoutes  = require("./routes/courses");
+const teacherRoutes = require("./routes/teachers");
+
+app.use("/api/courses",  courseRoutes);
+app.use("/api/teachers", teacherRoutes);
 
 const app = express();
 
